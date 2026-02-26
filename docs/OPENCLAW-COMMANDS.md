@@ -130,6 +130,21 @@ Quick reference for OpenClaw CLI commands. Use `openclaw <command> --help` for f
 
 ---
 
+## Tips & related utils
+
+| What | Command or tip |
+|------|-----------------|
+| Version | `openclaw --version` or `openclaw version` (if available) — confirm CLI version. |
+| Logs to file | `openclaw logs --follow > openclaw.log` — capture tail to a file. |
+| Filter logs | Pipe to `grep` or `findstr`: e.g. `openclaw logs \| grep error`. |
+| One-off agent | `openclaw agent --to <target> --message "..." --deliver` — run task and deliver result. |
+| Cron run history | `openclaw cron runs --id <job-id> --limit 20` — inspect last 20 runs. |
+| Config dump | Use `openclaw config get` with a base path (if supported) or script multiple `get` calls. |
+| Safe updates | Run `openclaw update status` before `openclaw update`; consider a backup or staging run first. |
+| Alias (shell) | `alias oc='openclaw'` — shorten to `oc status`, `oc health`, etc. |
+
+---
+
 ## Placeholders & Conventions
 
 - **`+447...`** — Replace with full WhatsApp/phone number (E.164).
